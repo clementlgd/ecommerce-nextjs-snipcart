@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useSnipcart } from 'use-snipcart';
+// const useSnipcart = require('use-snipcart')
 import styles from '../styles/Header.module.scss';
 
 export default function Header() {

@@ -1,5 +1,5 @@
 import {NextApiRequest, NextApiResponse} from "next";
-import {products} from "../../index";
+import {products} from "../../../data/products";
 import {IProduct} from "../../../components/Product";
 
 export interface ISnipcartProduct {
