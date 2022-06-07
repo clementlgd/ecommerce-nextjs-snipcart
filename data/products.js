@@ -4,27 +4,27 @@ export const products = [
     name: "Cap",
     price: 35.00,
     description: "By far the most common betta fish. You can recognize it by its long tail aiming downwards.",
-    url: "/api/products/halfmoon"
+    url: "/api/products/1"
   },
   {
     id: "2",
     name: "Hoodie",
     price: 85.00,
     description: "By far the most common betta fish. You can recognize it by its long tail aiming downwards.",
-    url: "/api/products/veiltail"
+    url: "/api/products/2"
   },
   {
     id: "3",
     name: "Tee",
     price: 40.00,
     description: "By far the most common betta fish. You can recognize it by its long tail aiming downwards.",
-    url: "/api/products/test"
+    url: "/api/products/3"
   },
   {
     id: "4",
     name: "Tee",
     price: 30.00,
     description: "By far the most common betta fish. You can recognize it by its long tail aiming downwards.",
-    url: "/api/products/test"
+    url: "/api/products/4"
   }
 ]
