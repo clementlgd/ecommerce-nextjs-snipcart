@@ -1,8 +1,6 @@
 import type { GetStaticPaths, GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
-import Head from 'next/head'
-import Script from 'next/script';
-import Image from 'next/image'
-import styles from '../../styles/Product.module.scss'
+// import styles from '../../styles/Product.module.scss'
+import styles from '../../styles/ProductDetails.module.scss'
 
 import Product, {IProduct} from "../../components/Product";
 import { products } from '../../data/products.js';
@@ -15,10 +13,15 @@ const ProductDetails: NextPage = ({ product }: InferGetStaticPropsType<typeof ge
   // console.log("product", product);
   
   return (
-    <>
-      <p>Product page: {product.name}</p>
-      <div className="product__price-button-container">
-        <div className={styles.product__price}>${product.price.toFixed(2)}</div>
+    <div className={styles.product}>
+      <div className={styles.product__image}>
+      {/* <Image src={props.product.image} alt={props.product.image.src} /> */}
+      </div>
+      <div className={styles.product__rightSide}>
+        <h2 className={styles.product__title}>{product.name}</h2>
+        <p className={styles.product__description}>{product.description}</p>
+        <div className={styles.product__priceButtonContainer}>
+          <p className={styles.product__price}>{product.price.toFixed(2)}€</p>
           <button
             className={`snipcart-add-item ${styles.product__button}`}
             data-item-id={product.id}
@@ -30,7 +33,8 @@ const ProductDetails: NextPage = ({ product }: InferGetStaticPropsType<typeof ge
             Add to cart
           </button>
         </div>
-    </>
+      </div>
+    </div>
   )
 }
 

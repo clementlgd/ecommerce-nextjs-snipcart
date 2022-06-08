@@ -10,7 +10,7 @@ export default function Layout({ children  }: PropsWithChildren<any>) {
   return (
       <>
         <Head>
-          <title>My awesome store</title>
+          <title>WhenToCop? store</title>
           <link rel="preconnect" href="https://app.snipcart.com"/>
           <link rel="preconnect" href="https://cdn.snipcart.com"/>
           <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.css"/>

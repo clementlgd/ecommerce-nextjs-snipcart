@@ -6,6 +6,7 @@
   padding: 0 50px;
   position: fixed;
   width: 100%;
+  z-index: 15;
 
   &__headerCart {
     button {
@@ -15,6 +16,11 @@
       cursor: pointer;
       font-size: 20px;
     }
+  }
+
+  &__cartIcon {
+    margin-right: 6px;
+    font-size: 20px;
   }
 
   &__headerLogo {
