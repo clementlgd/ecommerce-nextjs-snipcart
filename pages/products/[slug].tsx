@@ -43,6 +43,7 @@ export const getStaticProps: GetStaticProps<Props, { slug: string }> = async (ct
     props: {
       product: product.fields,
     },
+    revalidate: 60,
   };
 };
 
@@ -55,6 +56,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths: paths,
-    fallback: false,
+    fallback: 'blocking',
   };
 };
