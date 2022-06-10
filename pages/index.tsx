@@ -22,8 +22,9 @@ export const getStaticProps: GetStaticProps = async () => {
   ).map((entry) => entry.fields);
 
   return {
-      props: {
-          products,
-      }
+    props: {
+      products,
+    },
+    revalidate: 60,
   }
 }
