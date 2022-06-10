@@ -6,10 +6,16 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate:types": "contentful-typescript-codegen --output types/contentful.d.ts"
   },
   "dependencies": {
+    "contentful": "^9.1.32",
+    "contentful-management": "^10.6.2",
+    "contentful-typescript-codegen": "^3.2.3",
+    "dotenv": "^16.0.1",
     "next": "12.1.6",
+    "prettier": "^2.6.2",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-icon": "^1.0.0",
