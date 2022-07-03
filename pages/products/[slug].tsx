@@ -2,6 +2,7 @@ import type { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import styles from '../../styles/ProductDetails.module.scss'
 import { IProductsFields } from "../../types/contentful";
 import ContentService from "../../utils/content-service";
+import Image from 'next/image';
 
 interface Props {
   product: IProductsFields;
@@ -10,7 +11,7 @@ interface Props {
 const ProductDetails: NextPage<Props> = ({ product }) => (
   <div className={styles.product}>
     <div className={styles.product__image}>
-    {/* <Image src={props.product.image} alt={props.product.image.src} /> */}
+      <Image src={product.image_url} alt="image" objectFit="contain" layout="fill" className={'image'} />
     </div>
     <div className={styles.product__rightSide}>
       <h2 className={styles.product__title}>{product.name}</h2>
