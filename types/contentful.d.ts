@@ -10,6 +10,9 @@ export interface IProductsFields {
   /** Name */
   name: string;
 
+  /** Image_url */
+  image_url: string;
+
   /** Price */
   price: number;
 

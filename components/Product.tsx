@@ -9,6 +9,9 @@ export interface IProduct {
   /** Name */
   name?: string | undefined;
 
+  /** Image_url */
+  image_url: string;
+
   /** Price */
   price?: number | undefined;
 
@@ -34,7 +37,10 @@ const Product = (props: IProductProps) => {
     <Link href={`/products/${props.product.slug}`}>
       <div className={styles.product}>
         <div className={styles.product__image}>
-        {/* <Image src={props.product.image} alt={props.product.image.src} /> */}
+          {props?.product?.image_url && (
+              <Image src={props?.product?.image_url} alt="image" objectFit="contain" layout="fill" className={'image'} />
+            )
+          }
         </div>
         {/* <p className={styles.product__description}>{props.product.description}</p> */}
         <div className={styles.product__priceButtonContainer}>
